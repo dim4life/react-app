@@ -16,7 +16,20 @@ class Student extends Component
             </h4>
             </div>
             <div className="card-body">
-
+                <table className="table table-bordered table-striped">
+                    <thead>
+                        <tr>ID</tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Email Id</th>
+                        <th>Phone</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </div>
             </div>
             </div>

@@ -20,7 +20,17 @@ class Addstudent extends Component
     saveStudent = async (e) => {
         e.preventDefault();
 
-        const res = axios.post('/api/add-student', this.state);
+        const res = await axios.post('http://localhost:8000/api/add-student', this.state);
+        if(res.data.status === 200) 
+        {
+           console.log(res.data.message);
+           this.setState({
+            name: '',
+            course: '',
+            email: '',
+            phone: '',
+           });  
+        }
     }
 
     render() {
@@ -35,7 +45,7 @@ class Addstudent extends Component
             </h4>
             </div>
             <div className="card-body">
-                <form onSubmit={this.savveStudent} >
+                <form onSubmit={this.saveStudent} >
 
                    <div className="form-group mb-3">
                        <label>Student Name</label>
